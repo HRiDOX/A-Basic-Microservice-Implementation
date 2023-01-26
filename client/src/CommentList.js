@@ -20,7 +20,22 @@ const CommentList = ({ comments}) => {
 // as we don't need to depend on particular comment service 
 // aste aste microservice convert hocche r ki lul!!
     const renderedComments = comments.map(comment => {
-        return <li key={comment.id}>{comment.content}</li>
+        let content;
+        if (comment.status === 'approved') {
+            content = comment.content;
+            
+        }
+        if (comment.status === 'pending') {
+            content = 'The comment is waiting moderation';
+            
+        }
+        if (comment.status === 'rejected') {
+            content = 'The comment is rejected';
+            
+        }
+        
+
+        return <li key={comment.id}>{content}</li>
     });
   return (
    <ul>
