@@ -11,7 +11,7 @@ const PostList = () => {
         // now we used to emit posts when some one created post thn query service catch these events[all other post and comments service also catch events]
         //const res = await axios.get('http://localhost:4000/posts');
         // now we will use 4002 port to get post data from query service instead of getting data directly from a particular post service
-        const res = await axios.get('http://localhost:4002/posts');
+        const res = await axios.get('http://posts.com/posts');
 
         
         setPosts(res.data);

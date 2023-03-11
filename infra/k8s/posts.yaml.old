@@ -7,4 +7,4 @@ spec:
     - name: posts
       image: hridoy/posts:0.0.1
       imagePullPolicy: Never
-      
+#this file is for creating single pod now we don't need this we can create deployment to create post pod automatically      
